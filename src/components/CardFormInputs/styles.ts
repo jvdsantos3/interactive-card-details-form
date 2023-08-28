@@ -34,7 +34,8 @@ export const FormInput = styled.div<FormInputProps>`
 
     &:focus {
       outline: 0;
-      border-color: ${({ theme }) => theme.colors['gradient-1']};
+      border-color: ${({ theme, $wrong }) =>
+        $wrong ? theme.colors.red : theme.colors['gradient-1']};
     }
 
     &::placeholder {
