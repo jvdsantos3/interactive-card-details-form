@@ -9,6 +9,8 @@ export const CardsContainer = styled.section`
   display: flex;
   flex-direction: column;
 
+  filter: drop-shadow(0px 39px 60px rgba(0, 0, 0, 0.14));
+
   @media (min-width: 1024px) {
     width: 54.1rem;
     gap: 3.7rem;

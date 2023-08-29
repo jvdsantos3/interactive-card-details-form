@@ -15,7 +15,7 @@ export const HomeContainer = styled.main`
 
   @media (min-width: 1024px) {
     background: url(${bgMainDesktop}) no-repeat;
-    background-size: 48.3rem 100%;
+    background-size: 33.6% 100%;
   }
 `
 
