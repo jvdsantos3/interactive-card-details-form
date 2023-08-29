@@ -62,7 +62,6 @@ export function CardFormInputs() {
               mask="99"
               id="date"
               placeholder="MM"
-              max={31}
               {...register('mounth', {
                 valueAsNumber: true,
               })}
@@ -72,7 +71,6 @@ export function CardFormInputs() {
               mask="99"
               id="year"
               placeholder="YY"
-              max={99}
               {...register('year', {
                 valueAsNumber: true,
               })}
