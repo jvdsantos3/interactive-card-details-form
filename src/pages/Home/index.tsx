@@ -47,7 +47,7 @@ export function Home() {
     },
   })
 
-  const { handleSubmit, watch, reset } = CardHookForm
+  const { watch, reset } = CardHookForm
 
   const name = watch('name')
   const number = watch('number')
@@ -87,11 +87,13 @@ export function Home() {
           </SuccessContainer>
         ) : (
           <FormContainer>
-            <FormContent onSubmit={handleSubmit(handleSubmitForm)}>
+            <FormContent>
               <FormProvider {...CardHookForm}>
                 <CardFormInputs />
               </FormProvider>
-              <Button>Confirm</Button>
+              <Button type="button" onClick={handleSubmitForm}>
+                Confirm
+              </Button>
             </FormContent>
           </FormContainer>
         )}

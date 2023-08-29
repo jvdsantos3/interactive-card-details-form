@@ -16,22 +16,24 @@ interface CardsProps {
 }
 
 export function Cards({ name, number, mounth, year, cvc }: CardsProps) {
+  console.log(name, number, mounth, year, cvc)
+
   return (
     <CardsContainer>
       <CardBackContainer>
-        <span>{cvc}</span>
+        <span>{cvc || '000'}</span>
       </CardBackContainer>
 
       <CardFrontContainer>
         <img src={cardLogo} alt="Card's Logo" />
 
         <CardFrontContent>
-          <p>{number}</p>
+          <p>{number || '0000 0000 0000 0000'}</p>
 
           <div>
-            {name}{' '}
+            {name || 'felicia leire'}{' '}
             <span>
-              {isNaN(mounth) ? '00' : mounth}/{isNaN(year) ? '00' : year}
+              {mounth || '00'}/{year || '00'}
             </span>
           </div>
         </CardFrontContent>
