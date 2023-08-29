@@ -16,8 +16,6 @@ interface CardsProps {
 }
 
 export function Cards({ name, number, mounth, year, cvc }: CardsProps) {
-  console.log(name, number, mounth, year, cvc)
-
   return (
     <CardsContainer>
       <CardBackContainer>
