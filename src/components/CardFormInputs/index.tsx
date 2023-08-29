@@ -33,6 +33,7 @@ export function CardFormInputs() {
       >
         <label htmlFor="number">Card Number</label>
         <InputMask
+          type="text"
           mask="9999 9999 9999 9999"
           id="number"
           placeholder="e.g. 1234 5678 9123 0000"
@@ -57,6 +58,7 @@ export function CardFormInputs() {
 
           <div>
             <InputMask
+              type="text"
               mask="99"
               id="date"
               placeholder="MM"
@@ -66,8 +68,9 @@ export function CardFormInputs() {
               })}
             />
             <InputMask
+              type="text"
               mask="99"
-              id="date"
+              id="year"
               placeholder="YY"
               max={99}
               {...register('year', {
@@ -89,6 +92,7 @@ export function CardFormInputs() {
         <FormInput $wrong={errors.cvc?.type === 'too_small'}>
           <label htmlFor="cvc">CVC</label>
           <InputMask
+            type="text"
             mask="999"
             id="cvc"
             placeholder="e.g. 123"
